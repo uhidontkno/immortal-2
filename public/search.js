@@ -3,10 +3,9 @@
 /**
  *
  * @param {string} input
- * @param {string} template Template for a search query.
  * @returns {string} Fully qualified URL
  */
-function search(input, template) {
+function search(input) {
   try {
     // input is a valid URL:
     // eg: https://example.com, https://example.com/test?q=param
@@ -29,5 +28,5 @@ function search(input, template) {
 
   // Attempts to convert the input to a fully qualified URL have failed
   // Treat the input as a search query
-  return template.replace("%s", encodeURIComponent(input));
+  return "https://duckduckgo.com/?q=%s".replace("%s", encodeURIComponent(input));
 }

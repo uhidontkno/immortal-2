@@ -2,7 +2,7 @@
 // Ultravoilet v3 code, subject to MIT license.
 
 self.__uv$config = {
-  prefix: "/dev/sda1/",
+  prefix: "/uv/service/",
   encodeUrl: Ultraviolet.codec.xor.encode,
   decodeUrl: Ultraviolet.codec.xor.decode,
   handler: "/uv/uv.handler.js",
