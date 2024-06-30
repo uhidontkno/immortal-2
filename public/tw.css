@@ -36,3 +36,4 @@
   main {display:flex;flex-direction: column;}
   .quote::before {content:"\" ";color:#9CA3AF;font-weight: 600;}
   .quote::after {content:"\" ";color:#9CA3AF;font-weight: 600;}
+  .footer-link {@apply btn btn-circle btn-ghost mr-2 py-2 px-4 min-h-fit h-fit w-fit;}
