@@ -34,4 +34,5 @@
     background:linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.25) 100%);
   }
   main {display:flex;flex-direction: column;}
-  
+  .quote::before {content:"\" ";color:#9CA3AF;font-weight: 600;}
+  .quote::after {content:"\" ";color:#9CA3AF;font-weight: 600;}
