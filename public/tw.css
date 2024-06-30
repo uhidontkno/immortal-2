@@ -13,7 +13,7 @@
   .bg-overlay {
     background-image: url("svg/star.svg");
     background-size: 96px;  
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 0px;
     translate: -50% 0%;
@@ -30,7 +30,7 @@
     height: 100%;
     width: 100%;
     top: 0px;
-    position:absolute;
+    position:fixed;
     background:linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.25) 100%);
   }
   main {display:flex;flex-direction: column;}
@@ -39,3 +39,5 @@
   .footer-link {@apply btn btn-circle btn-ghost mr-2 py-2 px-4 min-h-fit h-fit w-fit;}
   footer {bottom:-36px; position:fixed; transition: all 0.3s;}
   footer:hover {bottom:0px;position:fixed;transition: all 0.3s;}
+
+  html,body {width:100%;}
