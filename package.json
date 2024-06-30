@@ -1,10 +1,17 @@
 {
   "name": "immortal-2",
   "type": "module",
+  "scripts": {
+    "build": "bunx tailwindcss -i public/tw.css -o public/index.css -m -w"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@catppuccin/daisyui": "^1.1.1",
+    "daisyui": "^4.12.10"
   }
 }
