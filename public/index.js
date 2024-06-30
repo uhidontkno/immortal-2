@@ -1,7 +1,7 @@
 // Ultravoilet v3 code, subject to MIT license.
 "use strict";
 const form = document.getElementById("form");
-const address = document.getElementById("address");
+let address = document.getElementById("address");
 const searchEngine = "duckduckgo.com";
 
 form.addEventListener("submit", async (event) => {
@@ -29,7 +29,7 @@ function removeShit() {
   document.querySelector("footer").remove()
   document.querySelector("nav").appendChild(si)
   si.querySelector(".btn").addEventListener("click",()=>{
-    const url = search(address.value, searchEngine.value);
+    const url = search(document.getElementById("address").value, searchEngine.value);
     let frame = document.getElementById("frame");
     frame.src = __uv$config.prefix + __uv$config.encodeUrl(url);
   })
