@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.navbar {@apply bg-base-200/50 backdrop-blur fixed top-0 hover:backdrop-blur-md duration-300 hover:bg-base-200/70}
+@keyframes pan {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  .bg-overlay {
+    background-image: url("svg/star.svg");
+    background-size: 96px;  
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    translate: -50% 0%;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    opacity: 0.06;
+    animation: pan 180s linear infinite;
+    will-change: background-position;
+    z-index:-32767;
+    
+  }
