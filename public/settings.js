@@ -5,7 +5,7 @@ document.querySelector(".themeDropdownContent").innerHTML += `<li>
       <input
         type="radio"
         name="theme-dropdown"
-        class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+        class="theme-controller btn btn-sm btn-block btn-ghost justify-center"
         aria-label="${themeDisplay[i]}"
         data-theme="${themes[i]}"
         value="${themes[i]}" onclick="setTheme('${themes[i]}')" />

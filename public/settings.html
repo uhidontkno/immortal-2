@@ -22,28 +22,35 @@
     </nav>
    <main class="absolute top-0 w-full h-full pt-[72px]">
     <div class="sm:p-12 md:p-16 contain h-screen w-full flex justify-center align-middle items-center flex-col flex-1"> 
-        <div class=" px-2 w-full h-full rounded-xl bg-base-100/75 flex flex-col backdrop-blur-sm py-4 shadow-lg shadow-black/15">
-            <h2 class="font-bold text-4xl text-center">Immortal <span class="text-info font-black">2</span> | Settings</h2>
-            <br>
-            <div class="themeSelect justify-end z-50 px-6">
-                <div class="dropdown">
-                  <div tabindex="0" role="button" class="btn m-1">
-                    Theme
-                    <svg
-                      width="12px"
-                      height="12px"
-                      class="inline-block h-2 w-2 fill-current opacity-60"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 2048 2048">
-                      <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
-                    </svg>
+
+          <div class="card bg-base-100/70 backdrop-blur w-fit min-w-[360px] shadow-xl">
+            <div class="card-body">
+              <h2 class="card-title">Immortal <span class="text-info font-black">2</span> | Settings</h2>
+              <p>
+                <div class="themeSelect justify-end z-50 pr-12 pl-2">
+                    <div class="dropdown">
+                      <div tabindex="0" role="button" class="btn m-1">
+                        Select Theme
+                        <svg
+                          width="12px"
+                          height="12px"
+                          class="inline-block h-2 w-2 fill-current opacity-60"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 2048 2048">
+                          <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+                        </svg>
+                      </div>
+                      <ul tabindex="0" class="z-50 themeDropdownContent dropdown-content bg-base-300 rounded-box w-52 p-2 shadow-2xl">
+                        
+                      </ul>
+                    </div>
                   </div>
-                  <ul tabindex="0" class="z-50 themeDropdownContent dropdown-content bg-base-300 rounded-box w-52 p-2 shadow-2xl">
-                    
-                  </ul>
-                </div>
+              </p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-error">Clear</button>
               </div>
-        </div>
+            </div>
+          </div>
     </div>
     <iframe style="display: none;" id="frame" class="h-full"></iframe>
 </main>
