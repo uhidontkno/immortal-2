@@ -1,17 +1,14 @@
 {
-  "name": "immortal-2",
+  "name": "ultraviolet-static",
+  "main": "lib/index.js",
+  "version": "1.0.5",
   "type": "module",
-  "scripts": {
-    "build": "bunx tailwindcss -i public/tw.css -o public/index.css -m -w"
-  },
+  "files": [
+    "public",
+    "lib"
+  ],
   "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "@catppuccin/daisyui": "^1.1.1",
-    "daisyui": "^4.12.10"
+    "eslint": "^8.23.0",
+    "prettier": "^2.7.1"
   }
 }
