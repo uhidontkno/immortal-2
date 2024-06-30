@@ -34,3 +34,14 @@ function removeShit() {
     frame.src = __uv$config.prefix + __uv$config.encodeUrl(url);
   })
 }
+
+
+function setTheme(theme) {
+    let themeName = theme;
+    document.querySelector("html").setAttribute("data-theme",themeName);
+    localStorage.setItem("theme",themeName);
+}
+
+if (localStorage.getItem("theme")) {
+    setTheme(localStorage.getItem("theme"));
+}
