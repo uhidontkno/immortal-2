@@ -34,4 +34,4 @@
     background:linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.25) 100%);
   }
   main {display:flex;flex-direction: column;}
-  html,body {height:100%;width:100%;}
+  
