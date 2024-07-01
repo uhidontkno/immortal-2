@@ -69,9 +69,9 @@
                               </div>
                         </div>
                         <div>
-                            <span>Emergency Key: <input type="kbd" class="kbd w-12 placeholder:text-xs text-center font-mono" maxlength="1" value="" placeholder="None"></span>
+                            <span>Emergency Key: <input type="kbd" class="kbd w-12 placeholder:text-xs text-center font-mono emergKey" maxlength="1" value="" placeholder="None"></span>
                             <br>
-                            <span class="my-2">Emergency URL: <input type="text" class="ml-2 input input-bordered duration-200 hover:input-primary input-sm"></span>
+                            <span class="my-2">Emergency URL: <input type="text" class="ml-2 input input-bordered duration-200 hover:input-primary input-sm emergUrl"></span>
                             <br>
                             <span class="flex flex-row align-middle items-center">
                                 <b><a href="https://eruda.liriliri.io/" target="_blank">Eruda</a>:</b>
@@ -83,8 +83,8 @@
                   </div>
               </p>
               <div class="card-actions justify-end pr-3 pb-3">
-                <button class="btn btn-primary">Apply Changes</button>
-                <button class="btn btn-error">Clear</button>
+                <button class="btn btn-primary" onclick="saveChanges()">Apply Changes</button>
+                <button class="btn btn-error" onclick="clearChanges()">Clear</button>
               </div>
             </div>
           </div>

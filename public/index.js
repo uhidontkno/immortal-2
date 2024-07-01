@@ -1,4 +1,4 @@
-// Ultravoilet v3 code, subject to MIT license.
+// Parts of Ultravoilet v3 code, subject to MIT license.
 "use strict";
 const form = document.getElementById("form");
 let address = document.getElementById("address");
@@ -48,6 +48,6 @@ if (localStorage.getItem("theme")) {
 function eruda() {
   (function () { var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/npm/eruda"; document.body.append(script); script.onload = function () { eruda.init(); } })();
 }
-if (localStorage["eruda"]) {
+if (localStorage["eruda"] == "true") {
   eruda()
 }

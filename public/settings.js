@@ -46,3 +46,11 @@ function toggleTabCloaking() {
 function toggleEruda() {
     localStorage["eruda"] = document.querySelector(".erudaToggle").checked
 }
+
+function saveChanges() {
+    localStorage["tabCloakConf"] = `${btoa(document.querySelector(".tabName").value)};${btoa(document.querySelector(".tabIco").value)}`
+    localStorage["emergConf"] = `${document.querySelector("emergKey").value || "None"};${btoa(document.querySelector(".emergUrl"))}`
+}
+function clearChanges() {
+    localStorage.clear();
+}
