@@ -25,3 +25,10 @@ if (localStorage.getItem("theme")) {
 function eruda() {
     (function () { var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/npm/eruda"; document.body.append(script); script.onload = function () { eruda.init(); } })();
   }
+
+function tabCloakEvent() {
+    let ico = document.querySelector(".tabIco").value;
+    let name = document.querySelector(".tabName").value;
+    document.querySelector(".tab-active img").src = ico;
+    document.querySelector(".tab-active span").innerText = value
+}
