@@ -50,6 +50,9 @@ function toggleEruda() {
 function saveChanges() {
     localStorage["tabCloakConf"] = `${btoa(document.querySelector(".tabName").value)};${btoa(document.querySelector(".tabIco").value)}`
     localStorage["emergConf"] = `${document.querySelector("emergKey").value || "None"};${btoa(document.querySelector(".emergUrl"))}`
+    localStorage["eruda"] = document.querySelector(".erudaToggle").checked;
+    let tls = document.querySelector(".tabCloakingSection")
+    localStorage["tabCloaking"] = !tls.classList.contains("hidden")
 }
 function clearChanges() {
     localStorage.clear();
