@@ -29,6 +29,16 @@ function eruda() {
 function tabCloakEvent() {
     let ico = document.querySelector(".tabIco").value;
     let name = document.querySelector(".tabName").value;
+    if (ico.startsWith("http")) {
     document.querySelector(".tab-active img").src = ico;
-    document.querySelector(".tab-active span").innerText = value
+    } else {
+        document.querySelector(".tab-active img").src = "img/64.jpg";
+    }
+    document.querySelector(".tab-active span").innerText = name;
+}
+
+function toggleTabCloaking() {
+    let tls = document.querySelector(".tabCloakingSection")
+    tls.classList.toggle("hidden")
+    localStorage["tabCloaking"] = !tls.classList.contains("hidden")
 }

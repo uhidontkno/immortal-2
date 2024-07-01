@@ -50,19 +50,19 @@
                     <div>
                         <span class="flex flex-row">
                         <b>Tab Cloaking:</b>
-                        <input type="checkbox" class="toggle toggle-success bg-error" class="tabCloakingToggle ml-2 mb-2">
+                        <input type="checkbox" class="toggle toggle-success bg-error" class="tabCloakingToggle ml-2 mb-2" onclick="toggleTabCloaking()">
                         </span>
-                        <div class="card min-w-[510px] w-full bg-base-200 rounded-xl p-3 tabCloakingSection">
-                            <span>Tab Title:&nbsp;<input type="text" class="ml-2 input input-bordered duration-200 hover:input-primary input-sm tabName" nkeypress="tabCloakEvent()"></span>
-                            <span>Tab Icon URL:&nbsp;<input type="text" class="ml-2 input input-bordered duration-200 hover:input-primary input-sm tabIco" onkeypress="tabCloakEvent()"></span>
+                        <div class="card min-w-[510px] w-full bg-base-200 rounded-xl p-3 tabCloakingSection hidden">
+                            <span>Tab Title:&nbsp;<input onkeyup="tabCloakEvent()" type="text" class="ml-2 input input-bordered duration-200 hover:input-primary input-sm tabName" ></span>
+                            <span>Tab Icon URL:&nbsp;<input type="text" onkeyup="tabCloakEvent()" class="ml-2 input input-bordered duration-200 hover:input-primary input-sm tabIco" ></span>
                             <br>
                             Preview:
                             <div class="mockup-browser w-full bg-base-300 border border-white/25 rounded-b-md">
                                 <div class="mockup-browser-toolbar w-fit">
-                                    <div class="ml-6 tab rounded-b-sm bg-primary/30 rounded-t-lg active:bg-primary/20 duration-200 flex flex-row">
+                                    <div class="ml-6 tab rounded-b-sm bg-primary/30 rounded-t-lg active:bg-primary/20 duration-200 flex flex-row text-xs">
                                     <span class="min-w-[96px] max-w-[96px]">Immortal 2</span></div>
-                                    <div class="ml-2 tab tab-active rounded-b-sm bg-primary/50 rounded-t-lg active:bg-primary/30 duration-200 flex flex-row ">
-                                        <img class="rounded-xl border-none w-6 h-6 mr-2 bg-black/40" /><span  class="overflow-ellipsis overflow-clip min-w-[96px] max-w-[96px] leading-none  whitespace-nowrap"></span></div>
+                                    <div class="ml-2 tab tab-active rounded-b-sm bg-primary/50 rounded-t-lg active:bg-primary/30 duration-200 flex flex-row text-xs">
+                                        <img src="img/64.jpg" class="rounded-xl border-none w-6 h-6 mr-2 bg-black/40" /><span  class="overflow-ellipsis overflow-clip min-w-[96px] max-w-[96px] leading-none  whitespace-nowrap">Immortal 2</span></div>
                                     </div>
                                 </div>
                                 
