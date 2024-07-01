@@ -42,3 +42,7 @@ function toggleTabCloaking() {
     tls.classList.toggle("hidden")
     localStorage["tabCloaking"] = !tls.classList.contains("hidden")
 }
+
+function toggleEruda() {
+    localStorage["eruda"] = document.querySelector(".erudaToggle").checked
+}
