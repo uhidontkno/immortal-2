@@ -165,6 +165,19 @@ function updBookmarks() {
       frame.src = __uv$config.prefix + __uv$config.encodeUrl(t.href);
       removeShit();
     })
+    t.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+      let c = confirm("Delete this bookmark?");
+      if (!c) return
+      let bookmarks = JSON.parse(localStorage["bookmarks"] || "[]");
+      for (let x = 0; x < bookmarks.length; x++) {
+        if (bookmarks[x].includes(t.querySelector("span").innerText)) {
+          bookmarks.splice(x,1);
+          t.remove();break;
+        }
+      }
+      localStorage["bookmarks"] = JSON.stringify(bookmarks)
+    });
   }
   document.querySelector(".bmSection").appendChild(template)
 }
