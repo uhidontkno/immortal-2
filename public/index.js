@@ -72,3 +72,37 @@ if (localStorage["tabCloaking"] == "true") {
   }
   document.head.appendChild(link);
 }
+
+// Konami code sequence using key values
+const konamiCode = [
+  'ArrowUp', 'ArrowUp', 
+  'ArrowDown', 'ArrowDown', 
+  'ArrowLeft', 'ArrowRight', 
+  'ArrowLeft', 'ArrowRight', 
+  'b', 'a'
+];
+let konamiCodePosition = 0;
+
+function onKonamiCode() {
+  console.log("Konami!");
+  let img = document.createElement("img")
+  img.src = "img/immortal.gif"
+  img.style.position = "fixed"
+  img.style.top = "64px"
+  img.style.left = "64px"
+  img.style.height = "360px"
+  img.onclick = ()=>{img.remove();}
+  img.style.cursor = "pointer"
+  document.body.appendChild(img)
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === konamiCode[konamiCodePosition]) {
+      konamiCodePosition++;
+      if (konamiCodePosition === konamiCode.length) {
+          onKonamiCode();
+          konamiCodePosition = 0;
+      }
+  } else {
+      konamiCodePosition = 0;
+  }
+});

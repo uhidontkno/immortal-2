@@ -78,3 +78,4 @@ if (localStorage["tabCloakConf"]) {
     document.querySelector(".tabIco").value = atob(tcc[1]);
     document.querySelector(".tabName").value = atob(tcc[0]);
 }
+
