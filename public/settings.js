@@ -62,6 +62,7 @@ document.querySelector(".kbd").addEventListener("keydown",(e)=>{
     document.querySelector(".kbd").innerText = e.key;
 })
 if (Boolean(localStorage["tabCloaking"])) {
+    let tls = document.querySelector(".tabCloakingSection")
     tls.classList.remove("hidden")
 }
 
