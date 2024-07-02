@@ -140,6 +140,14 @@ function updBookmarks() {
     t.querySelector("img").src = atob(e[1])
     t.querySelector("span").innerText = e[2]
     document.querySelector(".bmSection").appendChild(t)
+    t.addEventListener("click",async (e) => {
+      e.preventDefault();
+      await registerSW();
+      let frame = document.getElementById("frame");
+      frame.style.display = "block";
+      frame.src = __uv$config.prefix + __uv$config.encodeUrl(t.href);
+      removeShit();
+    })
   }
   document.querySelector(".bmSection").appendChild(template)
 }
