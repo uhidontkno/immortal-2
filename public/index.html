@@ -9,13 +9,34 @@
 <body class="bg-background font-sans">
     <div class="bg-overlay2"></div>
     <div class="bg-overlay"></div>
-    
+    <dialog id="bookmarkMaker" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Create a Bookmark</h3>
+        <p class="py-4">
+          <label class="ml-2">Bookmark URL:</label><br>
+          <input type="text" class="ml-2 mb-2 input input-bordered duration-200 hover:input-primary input-sm bmBuilderUrl" placeholder="https://example.com" ><br>
+          <label class="ml-2">Bookmark Title:</label><br>
+          <input type="text" class="ml-2 mb-2 input input-bordered duration-200 hover:input-primary input-sm bmBuilderTitle" placeholder="Example" >
+          <br><br>
+          <span>The bookmark icon will automatically be generated for you.</span>
+        </p>
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="btn btn-success text-success-content bmMakerAdd">Add</button>
+            <button class="btn btn-error text-error-content bmMakerCancel">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
     <nav class="navbar z-50 ">
         <div class="flex-1">
           <a class="btn btn-ghost text-xl immortal" href="/">Immortal<b>2</b></a>
         </div>
         <div class="flex-none">
-          <ul class="menu menu-horizontal px-1">
+          <ul class="menu menu-horizontal px-1 flex align-middle items-center gap-3">
+            <li><button class="inlineBookmarkBtn hidden" onclick="bookmark()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+            </button></li>
             <li><a href="settings.html">Settings</a></li>
           </ul>
         </div>

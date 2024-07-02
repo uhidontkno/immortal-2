@@ -28,6 +28,7 @@ function removeShit() {
   document.querySelector(".contain").remove()
   document.querySelector("footer").remove()
   document.querySelector("nav").appendChild(si)
+  document.querySelector(".inlineBookmarkBtn").classList.remove("hidden")
   si.querySelector(".btn").addEventListener("click",()=>{
     const url = search(document.getElementById("address").value, searchEngine.value);
     let frame = document.getElementById("frame");
@@ -107,12 +108,14 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-document.querySelector("button.bookmark-btn.add").addEventListener("click",()=>{
-  let url = prompt("Bookmark URL?")
+
+document.querySelector(".bmMakerAdd").addEventListener("click",(e)=>{
+e.preventDefault(); 
+  let url = document.querySelector(".bmBuilderUrl").value
   try {new URL(url)} catch {
     alert("Invalid URL!");return;
   }
-  let title = prompt("Bookmark title?")
+  let title = document.querySelector(".bmBuilderTitle").value
   if (typeof title != "string") {
     alert("Invalid bookmark title!");return;
   }
@@ -123,6 +126,11 @@ document.querySelector("button.bookmark-btn.add").addEventListener("click",()=>{
   bookmarks.push(`${btoa(url)},${img},${title}`);
   localStorage["bookmarks"] = JSON.stringify(bookmarks)
   updBookmarks()
+  bookmarkMaker.close(); 
+})
+
+document.querySelector("button.bookmark-btn.add").addEventListener("click",()=>{
+  bookmarkMaker.showModal();
 })
 
 function updBookmarks() {
