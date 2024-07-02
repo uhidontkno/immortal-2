@@ -9,12 +9,18 @@ export default {
   plugins: [require("daisyui")],
   daisyui: {
     themes: [
+      "black",
       "night",
+      "dark",
+      "dim",
+      "synthwave",
       cat("mocha","mauve"),
       cat("macchiato","mauve"),
       cat("frappe","mauve"),
       cat("latte","mauve"),
-      "light"
+      "light",
+      "cupcake",
+      "nord"
     ]
   }
 }

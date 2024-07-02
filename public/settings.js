@@ -1,5 +1,5 @@
-let themes = ["night","mocha","macchiato","frappe","latte","light"];
-let themeDisplay = ["Night","Catppuccin Mocha","Catppuccin Macchiato","Catppuccin Frappe","Catppuccin Latte","Light"];
+let themes = ["black","night","dark","dim","synthwave","mocha","macchiato","frappe","latte","light","cupcake","nord"];
+let themeDisplay = ["OLED","Night","Dark","Dim","Synthwave","Catppuccin Mocha","Catppuccin Macchiato","Catppuccin Frappe","Catppuccin Latte","Light","Cupcake","NordVPN"];
 for (let i = 0; i < themes.length; i++) {
 document.querySelector(".themeDropdownContent").innerHTML += `<li>
       <input
