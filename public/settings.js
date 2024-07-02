@@ -28,7 +28,7 @@ document.querySelector(".emergUrl").addEventListener("keyup",(e)=>{
         "google":"https://google.com",
         "youtube":"https://youtu.be",
         "yt": "https://youtu.be",
-        "google class": "https://classroom.google.com",
+        "gclass": "https://classroom.google.com",
         "canvas": "https://canvas.instructure.com/",
         "launchpad": "https://launchpad.classlink.com",
         "scratch": "https://scratch.mit.edu",
