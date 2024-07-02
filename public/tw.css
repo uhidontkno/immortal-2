@@ -55,4 +55,6 @@ body,html {font-family:"Inter",sans-serif}
   }
   .bookmark-btn {@apply ring-1 ring-secondary/30 hover:ring-2 hover:ring-success/60 text-[16px] w-fit rounded-full btn-sm flex flex-row items-center align-middle}
   .template {display:none;}
-  .bmCard {@apply [animation-delay:1s] card flex-[0] card-body mt-16 bg-base-100 rounded-2xl hover:bg-base-200 hover:ring-2 hover:shadow-lg shadow-black/20 ring-secondary/70 fixed hover:bottom-0 -bottom-16  duration-300  rounded-b-none}
+  .bmCard {@apply [animation-delay:1s] card flex-[0] card-body mt-16 bg-base-100 rounded-2xl hover:bg-base-200 hover:ring-2 hover:shadow-lg shadow-black/20 ring-secondary/70 fixed bottom-0 duration-300 opacity-50 hover:opacity-100 rounded-b-none }
+  .bmCard .bmSection {height:48px !important; transition: all 0.67s;}
+  .bmCard:hover .bmSection {height:512px !important;transition: all 0.67s;}
