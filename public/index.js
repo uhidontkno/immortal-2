@@ -3,6 +3,7 @@
 const form = document.getElementById("form");
 let address = document.getElementById("address");
 const searchEngine = "duckduckgo.com";
+let isProxy = false;
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -33,7 +34,7 @@ function removeShit() {
     const url = search(document.getElementById("address").value, searchEngine.value);
     let frame = document.getElementById("frame");
     frame.src = __uv$config.prefix + __uv$config.encodeUrl(url);
-  })
+  }); isProxy = true;
 }
 
 
@@ -131,7 +132,9 @@ e.preventDefault();
   bookmarks = JSON.parse(bookmarks);
   bookmarks.push(`${btoa(url)},${img},${title}`);
   localStorage["bookmarks"] = JSON.stringify(bookmarks)
+  if (!isProxy) {
   updBookmarks()
+  }
   bookmarkMaker.close(); 
 })
 
