@@ -108,6 +108,12 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
+document.querySelector(".inlineBookmarkBtn").addEventListener("click",()=>{
+  bookmarkMaker.showModal();
+  let url = document.querySelector("iframe").src.replace(`${document.location.protocol}//${document.location.host}`,"").replace(__uv$config.prefix,"")
+  document.querySelector(".bmBuilderUrl").value = __uv$config.decodeUrl(url)
+  document.querySelector(".bmBuilderTitle").value = document.querySelector("iframe").contentDocument.title
+})
 
 document.querySelector(".bmMakerAdd").addEventListener("click",(e)=>{
 e.preventDefault(); 
