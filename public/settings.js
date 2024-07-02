@@ -79,6 +79,7 @@ function tabCloakEvent() {
 function toggleTabCloaking() {
     let tls = document.querySelector(".tabCloakingSection")
     tls.classList.toggle("hidden")
+    tls.classList.toggle("initial_slideIn")
     localStorage["tabCloaking"] = !tls.classList.contains("hidden")
 }
 

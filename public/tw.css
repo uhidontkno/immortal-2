@@ -43,3 +43,13 @@ body,html {font-family:"Inter",sans-serif}
   footer:hover {bottom:0px;position:fixed;transition: all 0.3s;}
 
   html,body {width:100%;}
+
+  @keyframes slideIn {
+    0% {opacity:0;transform:translateY(25px)}
+    100% {opacity:1;transform:translateY(0px)}
+  }
+  .initial_slideIn {
+    animation-delay: 0.2s;
+    animation: 0.75s slideIn forwards;
+    opacity:0;
+  }
