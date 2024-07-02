@@ -59,3 +59,16 @@ document.onkeydown = (e)=>{
     document.location = atob(conf[1])
   }
 }
+if (localStorage["tabCloaking"] == "true") {
+  let conf = localStorage["tabCloakConf"].split(";");
+  document.title = atob(conf[0]);
+  let link = document.createElement('link');
+  link.type = 'image/x-icon';
+  link.rel = 'icon';
+  link.href = atob(conf[1]);
+  let oldLink = document.querySelector('link[rel="icon"]');
+  if (oldLink) {
+      document.head.removeChild(oldLink);
+  }
+  document.head.appendChild(link);
+}
