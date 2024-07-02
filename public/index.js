@@ -51,3 +51,11 @@ function eruda() {
 if (localStorage["eruda"] == "true") {
   eruda()
 }
+
+document.onkeydown = (e)=>{
+  if (!localStorage["emergConf"]) return
+  let conf = localStorage["emergConf"].split(";")
+  if (e.key == conf[0] && conf[0]) {
+    document.location = atob(conf[1])
+  }
+}

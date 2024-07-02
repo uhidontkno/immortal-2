@@ -10,5 +10,8 @@
   "devDependencies": {
     "eslint": "^8.23.0",
     "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "@catppuccin/daisyui": "^1.1.1"
   }
 }
