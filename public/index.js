@@ -114,6 +114,7 @@ document.querySelector(".inlineBookmarkBtn").addEventListener("click",()=>{
   let url = document.querySelector("iframe").src.replace(`${document.location.protocol}//${document.location.host}`,"").replace(__uv$config.prefix,"")
   document.querySelector(".bmBuilderUrl").value = __uv$config.decodeUrl(url)
   document.querySelector(".bmBuilderTitle").value = document.querySelector("iframe").contentDocument.title
+  bmBuilderUpd()
 })
 
 document.querySelector(".bmMakerAdd").addEventListener("click",(e)=>{
@@ -181,6 +182,16 @@ function updBookmarks() {
   }
   document.querySelector(".bmSection").appendChild(template)
 }
+
+function bmBuilderUpd() {
+  let title = document.querySelector(".bmBuilderTitle").value;
+  let url = document.querySelector(".bmBuilderUrl").value;
+  let t = document.querySelector(".bmBuilderTemplate");
+  t.querySelector("span").innerText = title;
+try {new URL(url)} catch {return}
+  t.querySelector("img").src = `https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${new URL(url).host}&size=64`
+}
+
 setTimeout(()=>{
   updBookmarks()
-},500)
+},250)
