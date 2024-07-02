@@ -50,7 +50,7 @@
                     <div>
                         <span class="flex flex-row">
                         <b>Tab Cloaking:</b>
-                        <input type="checkbox" class="toggle toggle-success bg-error" class="tabCloakingToggle ml-2 mb-2" onclick="toggleTabCloaking()">
+                        <input type="checkbox" class="toggle toggle-success bg-error tabCloakingToggle ml-2 mb-2" onclick="toggleTabCloaking()">
                         </span>
                         <div class="card min-w-[510px] w-full bg-base-200 rounded-xl p-3 tabCloakingSection hidden">
                             <span>Tab Title:&nbsp;<input onkeyup="tabCloakEvent()" type="text" class="ml-2 input input-bordered duration-200 hover:input-primary input-sm tabName" ></span>
@@ -69,7 +69,7 @@
                               </div>
                         </div>
                         <div>
-                            <span>Emergency Key: <input type="kbd" class="kbd w-12 placeholder:text-xs text-center font-mono emergKey" maxlength="1" value="" placeholder="None"></span>
+                            <span>Emergency Key: <kbd class="kbd text-sm min-w-6 max-w-32 mx-auto w-fit text-center font-mono emergKey" contenteditable="true">None</kbd>
                             <br>
                             <span class="my-2">Emergency URL: <input type="text" class="ml-2 input input-bordered duration-200 hover:input-primary input-sm emergUrl"></span>
                             <br>
