@@ -61,3 +61,18 @@ document.querySelector(".kbd").addEventListener("keydown",(e)=>{
     e.preventDefault();
     document.querySelector(".kbd").innerText = e.key;
 })
+if (Boolean(localStorage["tabCloaking"])) {
+    tls.classList.remove("hidden")
+}
+
+document.querySelector(".erudaToggle").checked = Boolean(localStorage["eruda"]);
+if (localStorage["emergConf"]) {
+    let ec = localStorage["emergConf"].split(";")
+    document.querySelector(".emergKey").innerText = ec[0]
+    document.querySelector(".emergUrl").value = atob(ec[1])
+}
+if (localStorage["tabCloakConf"]) {
+    let tcc = localStorage["tabCloakConf"].split(";")
+    document.querySelector(".tabIco").value = atob(tcc[1]);
+    document.querySelector(".tabName").value = atob(tcc[0]);
+}
