@@ -117,10 +117,10 @@ document.querySelector("button.bookmark-btn.add").addEventListener("click",()=>{
     alert("Invalid bookmark title!");return;
   }
   let u = new URL(url);
-  let img = u.protocol + "//" + u.host + "/favicon.ico"
+  let img = btoa(`https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${u.host}&size=64`)
   let bookmarks = localStorage["bookmarks"] || "[]";
   bookmarks = JSON.parse(bookmarks);
-  bookmarks.push(`${url},${img},${title}`);
+  bookmarks.push(`${btoa(url)},${img},${title}`);
   localStorage["bookmarks"] = JSON.stringify(bookmarks)
   updBookmarks()
 })
@@ -136,8 +136,8 @@ function updBookmarks() {
     let t = template.cloneNode(true);
     let e = bookmarks[i].split(",")
     t.classList.remove("template");
-    t.href = e[0]
-    t.querySelector("img").src = e[1]
+    t.href = atob(e[0])
+    t.querySelector("img").src = atob(e[1])
     t.querySelector("span").innerText = e[2]
     document.querySelector(".bmSection").appendChild(t)
   }
