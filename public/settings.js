@@ -22,6 +22,43 @@ if (localStorage.getItem("theme")) {
     setTheme(localStorage.getItem("theme"));
 }
 
+let autocomplete = {
+    "google":"https://google.com",
+    "youtube":"https://youtu.be",
+    "yt": "https://youtu.be",
+    "google class": "https://classroom.google.com",
+    "canvas": "https://canvas.instructure.com/",
+    "launchpad": "https://launchpad.classlink.com",
+    "scratch": "https://scratch.mit.edu",
+    "github": "https://github.com",
+    "gh": "https://github.com",
+    "gmail": "https://gmail.com",
+    "google drive": "https://drive.google.com",
+    "gdrive": "https://drive.google.com",
+    "docs": "https://docs.google.com",
+    "google docs": "https://docs.google.com",
+    "google maps": "https://google.com/maps",
+    "microsoft": "https://microsoft.com",
+    "office": "https://office.com",
+    "microsoft office": "https://office.com",
+    "outlook":"https://outlook.com",
+    "hotmail": "https://outlook.com",
+    "wikihow":"https://wiki.how",
+    "w3schools":"https://w3schools.com",
+    "ixl":"https://ixl.com",
+    "khan academy": "https://www.khanacademy.org/",
+    "khan": "https://www.khanacademy.org/"
+}
+
+document.querySelector(".emergUrl").addEventListener("keydown",()=>{
+    let v = document.querySelector(".emergUrl").value
+    for (let i = 0; i > autocomplete.length; i++) {
+        if (v.toLowerCase.startsWith(autocomplete[i])) {
+            document.querySelector(".emergUrl") = autocomplete[i]
+        }
+    } 
+})
+
 function eruda() {
     (function () { var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/npm/eruda"; document.body.append(script); script.onload = function () { eruda.init(); } })();
   }
