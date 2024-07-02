@@ -106,3 +106,43 @@ document.addEventListener('keydown', function(e) {
       konamiCodePosition = 0;
   }
 });
+
+document.querySelector("button.bookmark-btn.add").addEventListener("click",()=>{
+  let url = prompt("Bookmark URL?")
+  try {new URL(url)} catch {
+    alert("Invalid URL!");return;
+  }
+  let title = prompt("Bookmark title?")
+  if (typeof title != "string") {
+    alert("Invalid bookmark title!");return;
+  }
+  let u = new URL(url);
+  let img = u.protocol + "//" + u.host + "/favicon.ico"
+  let bookmarks = localStorage["bookmarks"] || "[]";
+  bookmarks = JSON.parse(bookmarks);
+  bookmarks.push(`${url},${img},${title}`);
+  localStorage["bookmarks"] = JSON.stringify(bookmarks)
+  updBookmarks()
+})
+
+function updBookmarks() {
+  let template = document.querySelector("a.bookmark-btn.template").cloneNode(true);
+  let bm = document.querySelectorAll("a.bookmark-btn");
+  for (let btn of bm) {
+    btn.remove();
+  }
+  let bookmarks = JSON.parse(localStorage["bookmarks"] || "[]");
+  for (let i = 0; i < bookmarks.length; i++) {
+    let t = template.cloneNode(true);
+    let e = bookmarks[i].split(",")
+    t.classList.remove("template");
+    t.href = e[0]
+    t.querySelector("img").src = e[1]
+    t.querySelector("span").innerText = e[2]
+    document.querySelector(".bmSection").appendChild(t)
+  }
+  document.querySelector(".bmSection").appendChild(template)
+}
+setTimeout(()=>{
+  updBookmarks()
+},500)

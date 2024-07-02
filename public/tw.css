@@ -54,3 +54,4 @@ body,html {font-family:"Inter",sans-serif}
     opacity:0;
   }
   .bookmark-btn {@apply ring-1 ring-secondary/30 hover:ring-2 hover:ring-success/60 rounded-xl text-[16px]}
+  .template {display:none;}
