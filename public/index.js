@@ -194,7 +194,8 @@ try {new URL(url)} catch {return}
 
 setTimeout(()=>{
   (async()  => {
+    console.log("registering service worker")
     await registerSW();
-  })
+  })();
   updBookmarks()
 },250)
