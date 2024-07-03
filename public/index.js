@@ -75,7 +75,7 @@ if (localStorage["tabCloaking"] == "true") {
   document.head.appendChild(link);
 }
 
-// Konami code sequence using key values
+// Konami code sequence
 const konamiCode = [
   'ArrowUp', 'ArrowUp', 
   'ArrowDown', 'ArrowDown', 
