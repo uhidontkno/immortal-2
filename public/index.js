@@ -193,5 +193,8 @@ try {new URL(url)} catch {return}
 }
 
 setTimeout(()=>{
+  (async()  => {
+    await registerSW();
+  })
   updBookmarks()
 },250)
