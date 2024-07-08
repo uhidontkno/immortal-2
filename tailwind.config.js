@@ -13,7 +13,6 @@ export default {
       "night",
       "dark",
       "dim",
-      "synthwave",
       cat("mocha","mauve"),
       cat("macchiato","mauve"),
       cat("frappe","mauve"),

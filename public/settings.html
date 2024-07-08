@@ -49,13 +49,13 @@
                     </div>
                   </div>
                   <br>
-                  <div class="grid grid-cols-1 gap-6">
+                  <div class="grid grid-cols-1 gap-3">
                     <div>
                         <span class="flex flex-row">
                         <b>Tab Cloaking:</b>
-                        <input type="checkbox" class="toggle toggle-success bg-error tabCloakingToggle ml-2 mb-2" onclick="toggleTabCloaking()">
+                        <input type="checkbox" class="toggle toggle-success bg-error tabCloakingToggle ml-2" onclick="toggleTabCloaking()">
                         </span>
-                        <div class="card min-w-[510px] w-full bg-base-200 rounded-xl p-3 tabCloakingSection hidden">
+                        <div class="card min-w-[510px] w-full bg-base-200 rounded-xl p-3 tabCloakingSection mt-2 hidden">
                             <span>Tab Title:&nbsp;<input onkeyup="tabCloakEvent()" type="text" class="ml-2 input input-bordered duration-200 hover:input-primary input-sm tabName" ></span>
                             <span>Tab Icon URL:&nbsp;<input type="text" onkeyup="tabCloakEvent()" class="ml-2 input input-bordered duration-200 hover:input-primary input-sm tabIco" ></span>
                             <br>
@@ -72,22 +72,21 @@
                               </div>
                         </div>
                         <div>
-                            <span>Emergency Key: <kbd class="kbd text-sm min-w-6 max-w-32 mx-auto w-fit text-center font-mono emergKey" contenteditable="true">None</kbd><button class="btn btn-sm btn-outline ml-4" onclick="document.querySelector('.emergKey').innerText = 'None'">Reset</button></span>
+                            <span>Emergency Key: <kbd class="kbd text-sm mb-1 min-w-6 max-w-32 mx-auto w-fit text-center font-mono emergKey" contenteditable="true">None</kbd><button class="btn btn-sm btn-outline ml-4" onclick="document.querySelector('.emergKey').innerText = 'None'">Reset</button></span>
                             <br>
-                            <span class="my-2">Emergency URL: <input type="text" class="ml-2 input input-bordered duration-200 hover:input-primary input-sm emergUrl"></span>
-                            <br>
-                            <span class="flex flex-row align-middle items-center">
-                                <b><a href="https://eruda.liriliri.io/" target="_blank">Eruda</a>:</b>
-                        <input type="checkbox" class="toggle toggle-success bg-error ml-2 erudaToggle" onclick="toggleEruda()">
-                            </span>
+                            <span class="pt-1">Emergency URL: <input type="text" class="ml-2 input input-bordered duration-200 hover:input-primary input-sm emergUrl"></span>
                             
+                        </div>
+                        <div class="flex flex-row align-middle items-center">
+                          <b><a href="https://eruda.liriliri.io/" target="_blank">Eruda</a>:</b>
+                        <input type="checkbox" class="toggle toggle-success bg-error ml-2 erudaToggle" onclick="toggleEruda()">
                         </div>
                     </div>
                   </div>
               </p>
               <div class="card-actions justify-end pr-3 pb-3">
-                <button class="btn btn-primary" onclick="saveChanges()">Apply Changes</button>
-                <button class="btn btn-error" onclick="clearChanges()">Clear</button>
+                <button class="btn btn-success" onclick="saveChanges()">Apply Changes</button>
+                <button class="btn" onclick="clearChanges()">Clear</button>
               </div>
             </div>
           </div>
