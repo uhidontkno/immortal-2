@@ -101,13 +101,13 @@ document.querySelector(".kbd").addEventListener("keydown",(e)=>{
     e.preventDefault();
     document.querySelector(".kbd").innerText = e.key;
 })
-if (Boolean(localStorage["tabCloaking"]) == true) {
+if (ocalStorage["tabCloaking"] == "true") {
     let tls = document.querySelector(".tabCloakingSection")
     tls.classList.remove("hidden")
     document.querySelector(".tabCloakingToggle").checked = true
 }
 
-document.querySelector(".erudaToggle").checked = Boolean(localStorage["eruda"]);
+document.querySelector(".erudaToggle").checked = localStorage["eruda"] == "true";
 if (localStorage["emergConf"]) {
     let ec = localStorage["emergConf"].split(";")
     document.querySelector(".emergKey").innerText = ec[0]
