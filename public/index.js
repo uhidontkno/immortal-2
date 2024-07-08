@@ -194,8 +194,14 @@ try {new URL(url)} catch {return}
 
 setTimeout(()=>{
   (async()  => {
+    await import("/register-sw.js")
+    await import("/baremux/bare.cjs")
+    await import("/uv/uv.bundle.js")
+    await import("/uv/uv.config.js")
+    await import("/search.js")
+    
     console.log("registering service worker")
     await registerSW();
   })();
-  updBookmarks()
+  updBookmarks();
 },250)
